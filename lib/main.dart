@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Allen',
-      theme: ThemeData.light(useMaterial3: true).copyWith(
+      theme: ThemeData.light(
+        useMaterial3: true,
+      ).copyWith(
         scaffoldBackgroundColor: Pallete.whiteColor,
         appBarTheme: AppBarTheme(
           backgroundColor: Pallete.whiteColor,
