@@ -1,9 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../pallete.dart';
 
 class ChatBubble extends StatelessWidget {
-  const ChatBubble({super.key});
+  final String generatedContent;
+  const ChatBubble({
+    super.key,
+    required this.generatedContent,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +32,11 @@ class ChatBubble extends StatelessWidget {
           vertical: 10.0,
         ),
         child: Text(
-          'Hello! What task can I do for you?',
+          generatedContent.isEmpty
+              ? 'Hello! What task can I do for you?'
+              : generatedContent,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: generatedContent == '' ? 20 : 15,
             fontFamily: 'Cera Pro',
             color: Pallete.mainFontColor,
           ),
